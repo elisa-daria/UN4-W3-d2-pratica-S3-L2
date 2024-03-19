@@ -19,4 +19,12 @@ public class EventsDAO {
         transaction.commit();
         System.out.println("Evento "+ event.getDescription()+" salvato");
     }
+    public Event getById(int id){
+        Event event=em.find(Event.class,id);
+        if(event.equals(null))throw new RuntimeException();
+        else{
+            System.out.println(event.toString());
+            return event;
+        }
+    }
 }

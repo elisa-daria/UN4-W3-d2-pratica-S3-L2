@@ -21,6 +21,8 @@ static EntityManagerFactory emf= Persistence.createEntityManagerFactory("un4w3d2
         evd.save(birthday);
         evd.save(blabla);
         evd.save(coco);
+//        evd.getById(5);
+        evd.getById(2);
 
 
 
