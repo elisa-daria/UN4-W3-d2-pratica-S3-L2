@@ -1,10 +1,7 @@
 package elisadaria.entities;
 
 import elisadaria.enums.EventType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -14,6 +11,7 @@ import java.util.Date;
 public class Event {
     //attributes
     @Id
+    @GeneratedValue
     @Column(name="event_id")
     private int id;
     @Column(name = "nome_evento")
@@ -22,6 +20,7 @@ public class Event {
     private LocalDate eventDate;
     private String description;
     @Column(name = "tipo_evento")
+    @Enumerated(EnumType.STRING)
     private EventType tipoEvento;
     private int nMaxPartecipanti;
 
