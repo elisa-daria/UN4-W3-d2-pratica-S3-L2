@@ -27,4 +27,13 @@ public class EventsDAO {
             return event;
         }
     }
+    public void delete(int id){
+        Event eToDelete=this.getById(id);
+        EntityTransaction transaction=em.getTransaction();
+        transaction.begin();
+        em.remove(eToDelete);
+        transaction.commit();
+        System.out.println("Evento "+ eToDelete.toString()+" eliminato");
+    }
 }
+

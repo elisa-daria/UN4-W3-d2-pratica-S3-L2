@@ -18,11 +18,12 @@ static EntityManagerFactory emf= Persistence.createEntityManagerFactory("un4w3d2
         Event birthday=new Event("Compleanno Bee", LocalDate.of(2024,5,1),"big big party", EventType.PRIVATO,50);
         Event blabla=new Event("BLA party",LocalDate.ofYearDay(2025,5),"hfakgklsfgaogfjlasfgl",EventType.PUBBLICO,800);
         Event coco= new Event("Cocorico-Easter-Party",LocalDate.of(2024,3,31),"deborah deluca djset",EventType.PUBBLICO,2000);
-        evd.save(birthday);
-        evd.save(blabla);
-        evd.save(coco);
+//        evd.save(birthday);
+//        evd.save(blabla);
+//        evd.save(coco);
 //        evd.getById(5);
         evd.getById(2);
+        evd.delete(2);
 
 
 
