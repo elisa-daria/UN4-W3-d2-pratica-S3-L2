@@ -17,7 +17,7 @@ public class Person {
     private String email;
     private LocalDate dateOfBirth;
     private Gender gender;
-    @OneToMany(mappedBy = "attendance")
+    @OneToMany(mappedBy = "person")
     private List <Attendance> attendancesList;
 
 

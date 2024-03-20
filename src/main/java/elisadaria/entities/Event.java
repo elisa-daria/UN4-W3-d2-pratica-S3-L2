@@ -24,7 +24,7 @@ public class Event {
     @Enumerated(EnumType.STRING)
     private EventType tipoEvento;
     private int nMaxPartecipanti;
-    @OneToMany(mappedBy = "attendance")
+    @OneToMany(mappedBy = "event")
     private List<Attendance> attendances;
 
     //constructors
