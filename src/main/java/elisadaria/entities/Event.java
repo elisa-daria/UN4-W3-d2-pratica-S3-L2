@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "evento")
@@ -23,6 +24,8 @@ public class Event {
     @Enumerated(EnumType.STRING)
     private EventType tipoEvento;
     private int nMaxPartecipanti;
+    @OneToMany(mappedBy = "attendance")
+    private List<Attendance> attendances;
 
     //constructors
 
